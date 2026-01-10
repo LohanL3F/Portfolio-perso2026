@@ -1,3 +1,15 @@
+/* COULEURS */
+
+:root {
+  --base: #422219;
+  --wood: #8d6946;
+  --light-wood: #d0a67e;
+  --yellow: #d0a67e;
+  --green: #7e8347;
+}
+
+/* COULEURS */
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
@@ -13,7 +25,9 @@ body {
   background-color: black;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #global-content {
@@ -31,6 +45,7 @@ body {
   z-index: -10;
   width: 100%;
   height: 100%;
+  opacity: 50%;
 }
 
 #barriers {
@@ -118,13 +133,15 @@ body {
   transform: rotate(5deg) scale(1.05);
 }
 
+/* Responsive Accueil */
+
 @media (max-width: 780px) {
   #global-content {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 
   #main-character {
@@ -219,4 +236,40 @@ body {
   #travel-link {
     rotate: 10deg;
   }
+}
+
+/* Page Projets */
+
+#global-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+#selection-contener {
+  width: 40%;
+  height: 10%;
+  background-image: url(images/woodTexture.png);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  justify-self: center;
+  align-self: center;
+}
+
+.selection-button {
+  width: 30%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selection-picture {
+  height: 30%;
+  transition: transform 0.3s ease-in-out;
 }
