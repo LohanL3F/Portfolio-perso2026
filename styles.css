@@ -60,9 +60,42 @@ body {
 
 #pannel-text {
   position: absolute;
-  top: 20%;
-  left: 10%;
-  width: 80%;
-  font-size: 2rem;
-  text-align: center;
+  height: 20%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#projects-link {
+  position: absolute;
+  bottom: 25%;
+  left: 22%;
+  height: 35%;
+  transition: all 0.3s ease-in-out;
+  rotate: -5deg;
+}
+
+#projects {
+  height: 100%;
+}
+
+#travel-link {
+  position: absolute;
+  bottom: 25%;
+  right: 17%;
+  height: 35%;
+  transition: all 0.3s ease-in-out;
+  rotate: 5deg;
+}
+
+#travel {
+  height: 100%;
+}
+
+#projects-link:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+#travel-link:hover {
+  transform: rotate(5deg) scale(1.05);
 }
