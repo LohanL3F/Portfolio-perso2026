@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="keywords" content="Art, Dessins, Portfolio" />
+    <meta
+      name="description"
+      content="Un site portfolio pour présenter mes dessins ! Vous pourrez y trouver une partie de mon travail ainsi que des moyens pour me contacter."
+    />
+    <meta name="author" content="Lohan Lefèvre" />
   </head>
 
   <body>
-    <div id="global-content"></div>
+    <div id="global-content">
+      <div id="background-video">
+        <video autoplay muted loop id="night-video">
+          <source
+            src="images/Animations/BackgroundAnimnight.mp4"
+            type="video/webm"
+          />
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+      </div>
+
+      <div id="presentation-elements">
+        <img
+          src="images/CharacterMinimized.gif"
+          alt="Personnage"
+          id="main-character"
+        />
+
+        <div id="info-pannel">
+          <img src="images/Pannel.png" alt="Panneau d'affichage" id="pannel" />
+          <p id="pannel-text">Bienvenue !</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
