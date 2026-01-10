@@ -7,12 +7,15 @@
 body {
   font-family: Quicksand, sans-serif;
   background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #global-content {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 #background-video {
@@ -34,10 +37,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 50%;
+  bottom: 0;
 }
 
 #night-video {
-  width: 100%;
+  height: 120%;
 }
 
 #presentation-elements {
@@ -56,9 +60,11 @@ body {
 
 #info-pannel {
   position: absolute;
-  left: 15%;
-  width: 50%;
   height: 100%;
+  width: 50%;
+  bottom: 0;
+  left: 40%;
+  transform: translateX(-50%);
 }
 
 #pannel {
@@ -67,6 +73,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 #pannel-text {
@@ -78,36 +85,125 @@ body {
   pointer-events: none;
 }
 
-#projects-link {
+#poster-position {
   position: absolute;
-  bottom: 25%;
-  left: 22%;
-  height: 35%;
-  transition: all 0.3s ease-in-out;
-  rotate: -5deg;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 15%;
+  left: 8%;
 }
 
 #projects {
-  height: 100%;
-}
-
-#travel-link {
-  position: absolute;
-  bottom: 25%;
-  right: 17%;
-  height: 35%;
+  height: 70%;
   transition: all 0.3s ease-in-out;
   rotate: 5deg;
 }
 
 #travel {
-  height: 100%;
+  height: 70%;
+  transition: all 0.3s ease-in-out;
+  rotate: -5deg;
 }
 
-#projects-link:hover {
+#projects:hover {
   transform: rotate(-5deg) scale(1.05);
 }
 
-#travel-link:hover {
+#travel:hover {
   transform: rotate(5deg) scale(1.05);
+}
+
+@media (max-width: 780px) {
+  #global-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #main-character {
+    display: none;
+  }
+
+  #info-pannel {
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+  }
+
+  #pannel {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+
+  #poster-position {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    bottom: 25%;
+    left: 17%;
+  }
+
+  #projects-link {
+    height: 50%;
+    transition: all 0.3s ease-in-out;
+    rotate: 5deg;
+    box-sizing: border-box;
+  }
+
+  #travel-link {
+    height: 50%;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(-5deg) translateY(-20%);
+  }
+
+  #projects {
+    width: 60%;
+  }
+
+  #travel {
+    width: 60%;
+  }
+
+  #pannel-text {
+    position: absolute;
+    height: auto;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    width: 60%;
+    min-width: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  #poster-position {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+    flex-direction: column;
+    align-items: center;
+    bottom: -20px;
+  }
+
+  #projects {
+    width: 100%;
+  }
+
+  #travel {
+    width: 100%;
+  }
 }
