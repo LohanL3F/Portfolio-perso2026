@@ -206,4 +206,13 @@ body {
   #travel {
     width: 100%;
   }
+
+  #projects-link {
+    rotate: -5deg;
+    margin-left: 7%;
+  }
+
+  #travel-link {
+    rotate: 10deg;
+  }
 }
