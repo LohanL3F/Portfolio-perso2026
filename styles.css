@@ -186,7 +186,7 @@ body {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   #poster-position {
     position: absolute;
     width: 100%;
