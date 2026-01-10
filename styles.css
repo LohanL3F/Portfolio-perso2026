@@ -26,6 +26,16 @@ body {
   height: 100%;
 }
 
+#barriers {
+  background-image: url(images/barriers.png);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 50%;
+}
+
 #night-video {
   width: 100%;
 }
@@ -56,6 +66,7 @@ body {
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
 #pannel-text {
@@ -64,6 +75,7 @@ body {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
 #projects-link {
