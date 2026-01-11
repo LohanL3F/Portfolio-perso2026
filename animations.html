@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <meta name="keywords" content="Art, Dessins, Portfolio" />
+    <meta
+      name="description"
+      content="Un site portfolio pour présenter mes dessins ! Vous pourrez y trouver une partie de mon travail ainsi que des moyens pour me contacter."
+    />
+    <meta name="author" content="Lohan Lefèvre" />
+    <link rel="icon" href="images/portfolio logo.png" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="projects.html" class="nav-element">Projets</a>
+      <a href="index.html" class="nav-element">Accueil</a>
+      <a href="travel.html" class="nav-element">Parcours</a>
+    </nav>
+    <div id="background-video">
+      <video autoplay muted loop id="night-video">
+        <source
+          src="images/Animations/BackgroundAnimSunset.mp4"
+          type="video/webm"
+        />
+        Votre navigateur ne supporte pas la vidéo HTML5.
+      </video>
+      <div id="hanging-lights"></div>
+    </div>
+    <div id="selection-contener-drawings">
+      <h1 id="selection-title2">Choisissez !</h1>
+      <h1 id="selection-title">Vous souhaitez en voir d'autres ?</h1>
+      <div id="selection-buttons">
+        <a href="drawings.html" class="selection-button"
+          ><img
+            src="images/drawingsPage.png"
+            class="selection-picture"
+            alt="Dessins"
+        /></a>
+        <a href="sketches.html" class="selection-button"
+          ><img
+            src="images/sketchesPage.png"
+            class="selection-picture"
+            alt="Croquis"
+        /></a>
+      </div>
+    </div>
+
+    <div id="drawings-content">
+      <div id="drawings-banner">
+        <video autoplay muted loop id="banner-video">
+          <source
+            src="images/Animations/LandscapeSunset.mp4"
+            type="video/webm"
+          />
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+        <h1 id="banner-title">ANIMATIONS</h1>
+      </div>
+
+      <div id="animations-banner">
+        <h1 id="animations-banner-title">⭐ Animation récente ⭐</h1>
+        <video id="animations-banner-video" controls>
+          <source src="images/Animations/BillieToppy.mp4" type="video/webm" />
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+        <img
+          src="images/characterhappy.png"
+          alt="personnage"
+          id="animations-character"
+        />
+      </div>
+
+      <img
+        src="images/Animations/AliceSmileLight.gif"
+        class="animation lightboxable"
+        alt=""
+      />
+      <img
+        src="images/Animations/axetestblackbg.gif"
+        class="animation lightboxable"
+        alt=""
+      />
+      <img
+        src="images/Animations/Landscape.gif"
+        class="animation lightboxable"
+        alt=""
+      />
+      <img
+        src="images/Animations/LandscapeNight.gif"
+        class="animation lightboxable"
+        alt=""
+      />
+      <img
+        src="images/Animations/Shock.gif"
+        class="animation lightboxable"
+        alt=""
+      />
+      <img
+        src="images/Animations/SmilingLight.gif"
+        class="animation lightboxable"
+        alt=""
+      />
+    </div>
+    <div id="lightbox">
+      <img id="lightbox-img" alt="" />
+    </div>
+    <script src="lightbox.js" defer></script>
+  </body>
+</html>

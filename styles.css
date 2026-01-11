@@ -531,3 +531,77 @@ body {
     font-size: 2em;
   }
 }
+
+/* Page animations */
+
+.animation {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 3px solid var(--base);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  object-fit: contain;
+}
+
+.animation:hover {
+  transform: scale(1.05);
+}
+
+#animations-banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 25px;
+  border-top: 4px solid var(--base);
+  border-bottom: 4px solid var(--base);
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#animations-banner-video {
+  width: 100%;
+  max-width: 800px;
+
+  border: 4px solid var(--base);
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+#animations-banner-title {
+  color: var(--base);
+  font-size: clamp(1.5rem, 5vw, 3em);
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#animations-character {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  pointer-events: none;
+  z-index: 10;
+  bottom: 0;
+}
+
+/* Responsive Animations */
+
+@media (max-width: 600px) {
+  .animation {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  #animations-character {
+    display: none;
+  }
+}
