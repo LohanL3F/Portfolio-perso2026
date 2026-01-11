@@ -12,9 +12,6 @@
 
 * {
   -webkit-tap-highlight-color: transparent;
-}
-
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,6 +25,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--base);
 }
 
 #global-content {
@@ -250,26 +248,73 @@ body {
 }
 
 #selection-contener {
-  width: 40%;
-  height: 10%;
+  width: 70%;
+  max-width: 800px;
   background-image: url(images/woodTexture.png);
   background-size: cover;
+
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  justify-self: center;
-  align-self: center;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 20px;
+  border: 5px solid var(--base);
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+#selection-buttons {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .selection-button {
-  width: 30%;
-  height: 400px;
+  flex: 1 1 200px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .selection-picture {
-  height: 30%;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   transition: transform 0.3s ease-in-out;
+}
+
+.selection-picture:hover {
+  transform: scale(1.05);
+}
+
+#main-character-projects {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  pointer-events: none;
+  z-index: 10;
+  bottom: 0;
+}
+
+#selection-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--base);
+}
+
+/* Responsive Projets */
+
+@media (max-width: 700px) {
+  #selection-contener {
+    flex-direction: column;
+    margin-top: 200px;
+  }
+
+  #main-character-projects {
+    display: none;
+  }
 }
