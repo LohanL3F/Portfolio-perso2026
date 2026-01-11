@@ -318,6 +318,10 @@ body {
   bottom: 0;
 }
 
+#selection-title2 {
+  display: none;
+}
+
 /* Responsive Projets */
 
 @media (max-width: 700px) {
@@ -327,6 +331,14 @@ body {
   }
 
   #main-character-projects {
+    display: none;
+  }
+
+  #selection-title2 {
+    display: inline;
+  }
+
+  #selection-title {
     display: none;
   }
 }
